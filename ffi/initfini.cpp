@@ -55,10 +55,6 @@ LLVMPY_GetVersionInfo()
     unsigned int verinfo = 0;
     verinfo += LLVM_VERSION_MAJOR << 16;
     verinfo += LLVM_VERSION_MINOR << 8;
-#ifdef LLVM_VERSION_PATCH
-    /* Not available under Windows... */
-    verinfo += LLVM_VERSION_PATCH << 0;
-#endif
     return verinfo;
 }
 
